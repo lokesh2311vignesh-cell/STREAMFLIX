@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Slab:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #000;
+  color: white;
+}
+
+/* Main Background */
+
+.app {
+  min-height: 100vh;
+  position: relative;
+
+  background-image:
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/258d0f77-224b-4281-b2c8-bb9d6f4f3e5f/web/IN-en-20250616-TRIFECTA-perspective_03e2a4b4-8a0e-4b6d-9a42-4f8c0f8d3c16_large.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Dark Background */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.72),
+      rgba(0, 0, 0, 0.82)
+    );
+
+  z-index: 1;
+}
+
+/* Header */
+
+.header {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  padding: 35px 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #e50914;
+  font-family: "Roboto Slab", serif;
+
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+/* Language */
+
+.language {
+  color: white;
+  background: rgba(0, 0, 0, 0.55);
+
+  border: 1px solid #aaa;
+  border-radius: 4px;
+
+  padding: 12px 35px 12px 15px;
+
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Login */
+
+.login-wrapper {
+  position: relative;
+  z-index: 2;
+
+  min-height: calc(100vh - 110px);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 50px 20px 80px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 20px 0;
+}
+
+.login-box h1 {
+  font-family: "Roboto Slab", serif;
+
+  font-size: 40px;
+  line-height: 1.2;
+
+  margin-bottom: 45px;
+}
+
+/* Labels */
+
+.login-box form > label {
+  display: block;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  color: #cfcfcf;
+
+  margin-bottom: 9px;
+}
+
+/* Inputs */
+
+.login-box input[type="text"],
+.password-box input {
+  width: 100%;
+
+  height: 62px;
+
+  background: #333;
+
+  border: none;
+  border-radius: 5px;
+
+  padding: 0 20px;
+
+  color: white;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+
+  outline: none;
+
+  margin-bottom: 25px;
+}
+
+.login-box input::placeholder {
+  color: #aaa;
+}
+
+.login-box input:focus {
+  outline: 2px solid #e50914;
+}
+
+/* Password */
+
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  padding-right: 80px;
+}
+
+.show-btn {
+  position: absolute;
+
+  right: 12px;
+  top: 0;
+
+  height: 62px;
+
+  background: transparent;
+  border: none;
+
+  color: #ddd;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* Sign In */
+
+.signin-btn {
+  width: 100%;
+  height: 62px;
+
+  background: #e50914;
+  color: white;
+
+  border: none;
+  border-radius: 5px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.signin-btn:hover {
+  background: #f40612;
+  transform: translateY(-2px);
+}
+
+/* Options */
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 25px;
+
+  color: #aaa;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.remember input {
+  width: 18px;
+  height: 18px;
+
+  accent-color: #e50914;
+}
+
+.options a,
+.signup a,
+.learn-more {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.options a:hover,
+.signup a:hover,
+.learn-more:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+/* Signup */
+
+.signup {
+  margin-top: 55px;
+
+  color: #777;
+
+  font-size: 16px;
+}
+
+.signup a {
+  color: white;
+  font-weight: 600;
+}
+
+/* Info */
+
+.info {
+  margin-top: 35px;
+
+  color: #777;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.learn-more {
+  display: inline-block;
+
+  margin-top: 8px;
+
+  color: #777;
+
+  font-size: 12px;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 25px 35px;
+  }
+
+  .logo {
+    font-size: 32px;
+  }
+
+  .login-wrapper {
+    padding-top: 40px;
+  }
+
+  .login-box h1 {
+    font-size: 34px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .app {
+    background-position: center;
+  }
+
+  .header {
+    padding: 25px 20px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .language {
+    padding: 9px 25px 9px 10px;
+    font-size: 13px;
+  }
+
+  .login-wrapper {
+    padding: 25px 30px 60px;
+  }
+
+  .login-box h1 {
+    font-size: 31px;
+    margin-bottom: 35px;
+  }
+
+  .login-box input[type="text"],
+  .password-box input,
+  .signin-btn {
+    height: 58px;
+  }
+
+  .show-btn {
+    height: 58px;
+  }
+
+  .signup {
+    margin-top: 45px;
+  }
+}
